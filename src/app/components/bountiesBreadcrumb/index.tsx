@@ -11,24 +11,28 @@ export default function BountiesBreadcrumb() {
     return str.charAt(0).toUpperCase() + str.slice(1);
   };
 
-  return routes.map((route, index) => {
-    if (route === "") {
-      return null;
-    }
-
-    if (index === routes.length - 1) {
-      return (
-        <span key={index} className="flex text-zinc-500">
-          {capitalize(route)}{" "}
-          <ChevronRightIcon className="h-6 w-6 text-zinc-400" /> Home
-        </span>
-      );
-    }
-
-    return (
-      <span key={index} className="flex text-zinc-500">
-        {route} <ChevronRightIcon className="h-6 w-6 text-zinc-400" />
-      </span>
-    );
-  });
+  return (
+    <div className="flex items-center gap-x-2">
+      {routes.map((route, index) => (
+        <>
+          {route === "" ? null : (
+            <>
+              {routes.indexOf(route) === routes.length - 1 ? (
+                <span key={index} className="flex text-zinc-500">
+                  {capitalize(route.replaceAll("-", " "))}
+                </span>
+              ) : (
+                <div className="flex items-center">
+                  <span key={index} className="flex text-zinc-500">
+                    {capitalize(route)}
+                  </span>
+                  <ChevronRightIcon className="h-6 w-6 text-zinc-400" />
+                </div>
+              )}
+            </>
+          )}
+        </>
+      ))}
+    </div>
+  );
 }
