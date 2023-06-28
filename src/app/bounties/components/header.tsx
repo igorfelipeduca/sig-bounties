@@ -34,9 +34,12 @@ export default function BountiesHeader() {
             <span className="text-sm hover:text-sigPrimary hover:underline cursor-pointer">
               Contact
             </span>
-            <span className="text-sm hover:text-sigPrimary hover:underline cursor-pointer">
+            <a
+              href="https://discord.gg/k7tKxaHZBu"
+              className="text-sm hover:text-sigPrimary hover:underline cursor-pointer"
+            >
               Discord
-            </span>
+            </a>
           </div>
 
           <SheetSidebar />
