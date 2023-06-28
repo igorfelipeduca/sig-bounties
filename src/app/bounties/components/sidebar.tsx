@@ -1,12 +1,4 @@
 "use client";
-
-import {
-  Box,
-  ChevronDown,
-  ChevronRight,
-  ChevronRightIcon,
-  FileIcon,
-} from "lucide-react";
 import { useState } from "react";
 import SidebarItem from "./sidebarItem";
 
@@ -26,14 +18,8 @@ const defaultItems: ISidebarItem[] = [
     isOpen: false,
     subItems: [
       {
-        title: "Translation",
+        title: "Dynamic Sidebar",
         isOpen: false,
-        subItems: [
-          {
-            title: "i18n",
-            isOpen: false,
-          },
-        ],
       },
     ],
   },

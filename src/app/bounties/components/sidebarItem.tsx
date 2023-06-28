@@ -1,5 +1,6 @@
 import { Box, ChevronDown, ChevronRight } from "lucide-react";
 import { ISidebarItem } from "../sidebarItem";
+import Link from "next/link";
 
 interface ISidebarItemProps {
   item: ISidebarItem;
@@ -43,6 +44,11 @@ export default function SidebarItem({
     setSidebarItems(newSidebarItems);
   };
 
+  const parseFileName = (name: string) => {
+    if (name.replaceAll(" ", "-").toLowerCase() === "home") return "";
+    return name.replaceAll(" ", "-").toLowerCase();
+  };
+
   return (
     <div className="flex flex-col items-start">
       {item.subItems ? (
@@ -56,7 +62,7 @@ export default function SidebarItem({
                 <ChevronDown className="h-6 w-6" /> {item.title}
               </div>
 
-              <div className="pl-3">
+              <div className="pl-3 mt-2">
                 {item.subItems?.map((subItem, subIndex) => (
                   <SidebarItem
                     setSidebarItems={setSidebarItems}
@@ -77,12 +83,13 @@ export default function SidebarItem({
           )}
         </>
       ) : (
-        <div
+        <Link
           className="flex items-center hover:text-zinc-600 cursor-pointer gap-x-2"
           onClick={() => handleOpenToggle(item)}
+          href={`/bounties/${parseFileName(item.title)}`}
         >
           <Box className="h-4 w-4" /> {item.title}
-        </div>
+        </Link>
       )}
     </div>
   );
