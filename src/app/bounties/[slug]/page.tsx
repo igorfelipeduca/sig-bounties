@@ -42,19 +42,19 @@ async function getPost(filepath: string): Promise<Post<Frontmatter>> {
 export default async function Bounty({ params }: IBountyProps) {
   // Get the serialized content and frontmatter
   const { serialized, frontmatter } = await getPost(
-    `./src/content/${params.slug}.mdx`
+    `./src/app/content/bounties/${params.slug}.mdx`
   );
 
   return (
-    <div className="text-zinc-400 p-16">
+    <div className="text-zinc-400 p-16 border-r border-zinc-800">
       <BountiesBreadcrumb />
 
-      <div className="px-32 py-16">
+      <div className="py-16 max-w-4xl">
         <h1 className="text-zinc-300 font-bold text-4xl">
           {frontmatter.title}
         </h1>
 
-        <span className="text-zinc-400 text-lg mt-8">
+        <span className="text-zinc-400 text-md mt-8">
           Published at {frontmatter.date}
         </span>
 

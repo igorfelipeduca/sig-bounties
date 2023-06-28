@@ -71,9 +71,12 @@ export default function Bounties() {
           </p>
 
           <div className="flex items-center gap-x-8">
-            <div className="flex items-center mt-4 text-sigPrimary gap-x-2 font-medium">
+            <a
+              href="https://discord.gg/k7tKxaHZBu"
+              className="flex items-center mt-4 text-sigPrimary gap-x-2 font-medium"
+            >
               <BsDiscord className="h-6 w-6" /> Sig Community
-            </div>
+            </a>
 
             <a
               href="https://twitter.com/sigcoding"
