@@ -1,6 +1,13 @@
 import Image from "next/image";
-import Branches from "./assets/sig-branches.png";
-import { CalendarIcon, ClockIcon } from "lucide-react";
+import Branches from "../assets/sig-branches.png";
+import {
+  CalendarIcon,
+  ClockIcon,
+  FileIcon,
+  LeafIcon,
+  MedalIcon,
+} from "lucide-react";
+import ContributorTag from "../components/contributorTag";
 
 export default function Home() {
   return (
@@ -13,20 +20,20 @@ export default function Home() {
               <span className="border-b-4 border-sigPrimary hover:border-none hover:bg-sigPrimary transition-colors ease">
                 IDEAS
               </span>
-              , AND WE PAY FOR{" "}
+              , AND WE MAKE{" "}
               <span className="border-b-4 border-sigPrimary hover:border-none hover:bg-sigPrimary transition-colors ease">
                 RESULTS
-              </span>
-              .
+              </span>{" "}
+              HAPPEN.
             </div>
 
             <div className="mt-16 border-t border-zinc-400 text-zinc-400 font-light w-xl flex justify-between py-8 text-xs">
               <h1 className="cursor-pointer hover:border-b hover:border-b-sigPrimary hover:text-sig-primary">
-                BE A PART AS DEVELOPER
+                JOIN THE TEAM
               </h1>
 
               <h1 className="cursor-pointer hover:border-b hover:border-b-sigPrimary hover:text-sig-primary">
-                POWER YOUR STARTUP
+                POWER YOUR IDEA
               </h1>
             </div>
           </div>
@@ -82,20 +89,20 @@ export default function Home() {
               <span className="border-b-4 border-sigPrimary hover:border-none hover:bg-sigPrimary transition-colors ease">
                 IDEAS
               </span>
-              , AND PAY FOR{" "}
+              , AND WE MAKE{" "}
               <span className="border-b-4 border-sigPrimary hover:border-none hover:bg-sigPrimary transition-colors ease">
                 RESULTS
-              </span>
-              .
+              </span>{" "}
+              HAPPEN.
             </div>
 
             <div className="mt-16 border-t border-zinc-400 text-zinc-400 font-light w-[40rem] flex justify-between py-8">
               <h1 className="cursor-pointer hover:border-b hover:border-b-sigPrimary hover:text-sig-primary">
-                BE A PART AS DEVELOPER
+                JOIN THE TEAM
               </h1>
 
               <h1 className="cursor-pointer hover:border-b hover:border-b-sigPrimary hover:text-sig-primary">
-                POWER YOUR STARTUP
+                POWER YOUR IDEA
               </h1>
             </div>
           </div>
@@ -109,6 +116,12 @@ export default function Home() {
 
         <div className="mt-32 w-screen bg-sigPrimary">
           <div className="p-16">
+            <ContributorTag
+              githubUser="igorfelipeduca"
+              name="Igor F. Duca"
+              twitterUser="ducaswtf"
+            />
+
             <div className="flex justify-center mb-8">
               <div className="w-32 border-t-4 border-black" />
             </div>
@@ -119,21 +132,44 @@ export default function Home() {
               </h2>
             </div>
 
-            <div className="mt-16">
-              <div className="grid grid-cols-2 gap-x-16">
-                <div className="bg-black rounded-lg shadow-2xl text-white p-16">
+            <div className="mt-16 flex justify-center">
+              <div className="grid grid-cols-2 gap-x-16 gap-y-8">
+                <div className="bg-black rounded-lg shadow-2xl text-white p-16 max-w-lg">
                   <h1 className="text-2xl flex items-center gap-x-4">
-                    <CalendarIcon className="h-8 w-8 text-white" />
+                    <CalendarIcon className="h-8 w-8" />
                     Flexible calendar
                   </h1>
                 </div>
 
-                <div className="bg-black rounded-lg shadow-2xl text-white p-16">
+                <div className="bg-black rounded-lg shadow-2xl text-white p-16 max-w-lg">
                   <h1 className="text-2xl flex items-center gap-x-4">
-                    <ClockIcon className="h-8 w-8 text-white" />
+                    <ClockIcon className="h-8 w-8" />
                     Asynchronous teams
                   </h1>
                 </div>
+
+                <div className="bg-black rounded-lg shadow-2xl text-white p-16 max-w-lg">
+                  <h1 className="text-2xl flex items-center gap-x-4">
+                    <MedalIcon className="h-8 w-8" />
+                    Divided leadership
+                  </h1>
+                </div>
+
+                <div className="bg-black rounded-lg shadow-2xl text-white p-16 max-w-lg">
+                  <h1 className="text-2xl flex items-center gap-x-4">
+                    <LeafIcon className="h-8 w-8" />
+                    Work how you want
+                  </h1>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 flex justify-center">
+              <div className="bg-black rounded-lg shadow-2xl text-white p-16 w-2/4 flex justify-center">
+                <h1 className="text-2xl flex items-center gap-x-4">
+                  <FileIcon className="h-8 w-8" />
+                  Read our manifesto
+                </h1>
               </div>
             </div>
           </div>
