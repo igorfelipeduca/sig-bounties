@@ -1,6 +1,6 @@
 import { ChevronRightIcon, LinkIcon } from "lucide-react";
-import BountiesBreadcrumb from "../components/bountiesBreadcrumb";
 import { BsDiscord, BsTwitter } from "react-icons/bs";
+import BountiesBreadcrumb from "../components/bountiesBreadcrumb";
 
 export default function Bounties() {
   return (
