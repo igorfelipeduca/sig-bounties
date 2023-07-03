@@ -9,7 +9,6 @@ import {
   HardHatIcon,
 } from "lucide-react";
 import ContributorTag from "../components/contributorTag";
-import CoreValues from "../components/coreValues/coreValues";
 import { BsStopwatch } from "react-icons/bs";
 import Seraphini from "../assets/partners/seraphini.png";
 import Migranti from "../assets/partners/migranti.png";
