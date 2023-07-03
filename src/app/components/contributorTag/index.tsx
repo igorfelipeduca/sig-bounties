@@ -11,31 +11,33 @@ interface IContributorTag {
   name: string;
   twitterUser: string;
   githubUser: string;
+  contributed: string;
 }
 
 export default function ContributorTag({
   name,
   twitterUser,
   githubUser,
+  contributed,
 }: IContributorTag) {
+  const initials = name
+    .split(" ")
+    .reduce((i) => i.charAt(0).toUpperCase() + i.slice(1), "");
+
   return (
     <HoverCard>
-      <HoverCardTrigger className="bg-opacity-80 bg-black text-white p-2 text-center rounded-lg shadow-lg flex items-center gap-x-4 max-w-xs justify-center">
+      <HoverCardTrigger className="bg-opacity-80 bg-black text-white p-2 text-center rounded-lg shadow-lg flex items-center gap-x-4 justify-center">
         <Avatar>
-          <AvatarImage
-            src={`https://avatars.githubusercontent.com/u/108759590?v=4`}
-          />
-          <AvatarFallback>CN</AvatarFallback>
+          <AvatarImage src={`https://github.com/${githubUser}.png`} />
+          <AvatarFallback>{initials}</AvatarFallback>
         </Avatar>
         {name}&apos;s contribution
       </HoverCardTrigger>
-      <HoverCardContent className="bg-black text-zinc-300">
+      <HoverCardContent className="bg-black text-zinc-300 w-96">
         <div className="items-center flex gap-x-4">
           <Avatar>
-            <AvatarImage
-              src={`https://avatars.githubusercontent.com/u/108759590?v=4`}
-            />
-            <AvatarFallback>CN</AvatarFallback>
+            <AvatarImage src={`https://github.com/${githubUser}.png`} />
+            <AvatarFallback></AvatarFallback>
           </Avatar>
           <a
             href={`https://github.com/igorfelipeduca/sig-bounties`}
@@ -48,8 +50,7 @@ export default function ContributorTag({
 
         <div className="py-4">
           <span className="text-zinc-400">
-            Igor F. Duca contributed with the task: Build a &apos;How does Sig
-            works&apos; content section
+            {name} contributed with the task: {contributed}
           </span>
         </div>
 
