@@ -52,7 +52,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        // SESSÃO SOBRE NÓS
+
         <div className="mt-32 w-screen bg-sigPrimary">
           <div className="p-16">
             <div className="flex justify-center mb-8">
