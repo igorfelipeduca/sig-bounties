@@ -42,7 +42,7 @@ async function getPost(filepath: string): Promise<Post<Frontmatter>> {
 export default async function Bounty({ params }: IBountyProps) {
   // Get the serialized content and frontmatter
   const { serialized, frontmatter } = await getPost(
-    `@/app/content/bounties/${params.slug}.mdx`
+    `./src/app/content/bounties/${params.slug}.mdx`
   );
 
   return (
