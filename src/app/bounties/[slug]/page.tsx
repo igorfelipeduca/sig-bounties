@@ -3,6 +3,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import { promises as fs } from "fs";
 import { MdxContent } from "../../mdx-content";
 import BountiesBreadcrumb from "@/app/components/bountiesBreadcrumb";
+import path from "path";
 
 type Frontmatter = {
   title: string;
@@ -21,18 +22,14 @@ interface IBountyProps {
 }
 
 async function getPost(filepath: string): Promise<Post<Frontmatter>> {
-  // Read the file from the filesystem
   const raw = await fs.readFile(filepath, "utf-8");
 
-  // Serialize the MDX content and parse the frontmatter
   const serialized = await serialize(raw, {
     parseFrontmatter: true,
   });
 
-  // Typecast the frontmatter to the correct type
   const frontmatter = serialized.frontmatter as Frontmatter;
 
-  // Return the serialized content and frontmatter
   return {
     frontmatter,
     serialized,
@@ -40,10 +37,7 @@ async function getPost(filepath: string): Promise<Post<Frontmatter>> {
 }
 
 export default async function Bounty({ params }: IBountyProps) {
-  // Get the serialized content and frontmatter
-  const { serialized, frontmatter } = await getPost(
-    `./src/app/content/bounties/${params.slug}.mdx`
-  );
+  const { serialized, frontmatter } = await getPost(filePath);
 
   return (
     <div className="text-zinc-400 p-16 border-r border-zinc-800">
