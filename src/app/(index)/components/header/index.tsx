@@ -8,23 +8,23 @@ export default function Header() {
     <>
       <div className="block sm:hidden py-16 px-8">
         <div className="flex justify-between items-center">
-          <Image src={Sig} alt="Sig Coding" className="h-16 w-16" />
+          <Image src={Sig} alt="Sig Coding" className="h-10 w-10" />
 
-          <div className="grid grid-cols-4 gap-x-4">
+          <div className="flex items-center gap-x-4">
             <a
               href="https://discord.gg/k7tKxaHZBu"
-              className="text-md cursor-pointer text-zinc-200 hover:text-sigPrimary hover:underline"
+              className="text-sm cursor-pointer text-zinc-200 hover:text-sigPrimary hover:underline"
             >
               Discord
             </a>
             <Link
-              className="text-md cursor-pointer text-zinc-200 hover:text-sigPrimary hover:underline"
+              className="text-sm  cursor-pointer text-zinc-200 hover:text-sigPrimary hover:underline"
               href={"/bounties"}
             >
               Content
             </Link>
             <Link
-              className="text-md cursor-pointer text-zinc-200 hover:text-sigPrimary hover:underline"
+              className="text-sm  cursor-pointer text-zinc-200 hover:text-sigPrimary hover:underline"
               href={"/about-us"}
             >
               About Us

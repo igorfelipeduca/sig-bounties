@@ -111,7 +111,23 @@ export default function Home() {
         </div>
 
         <div className="mt-32 w-screen bg-gray-50">
-          <div className="p-16">
+          <div className="pl-10 pr-10 pb-8 pt-4 ">
+            <div className="flex items-center justify-center mb-8 gap-x-5">
+              <ContributorTag
+                githubUser="igorfelipeduca"
+                name="Igor F. Duca"
+                twitterUser="ducaswtf"
+                contributed="How does Sig work?"
+              />
+
+              <ContributorTag
+                githubUser="eduardotduca"
+                name="Eduardo T. Duca"
+                twitterUser="eduardottduca"
+                contributed="How does Sig work? / Partners Section / Manifest Section"
+              />
+            </div>
+
             <div className="flex justify-center mb-8">
               <div className="w-32 border-t-2 border-black" />
             </div>
