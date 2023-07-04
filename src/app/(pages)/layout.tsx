@@ -9,13 +9,9 @@ export default function BountiesLayout({ children }: IBountiesLayout) {
   return (
     <>
       <div className="sm:hidden block">
-        <div className="sticky top-0 z-10">
-          <BountiesHeader />
-        </div>
+        <BountiesHeader />
 
-        <div className="flex justify-between align-top overflow-y-scroll mt-16 h-screen">
-          {children}
-        </div>
+        {children}
       </div>
 
       <div className="hidden sm:block">
