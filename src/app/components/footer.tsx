@@ -77,13 +77,13 @@ const navigation = {
 export default function Footer() {
   return (
     <footer
-      className="bg-black border-t border-zinc-900 h-[20rem]"
+      className="bg-black border-t border-zinc-900 h-[16rem]"
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only"></h2>
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-4 sm:pt-4 lg:px-8 lg:pt-32">
         <div className="xl:grid xl:grid-cols-1 xl:gap-1 h-full">
-          <div className="h-[16rem] pb-[4rem] space-y-2">
+          <div className="h-[2rem] pb-[2rem] space-y-2">
             <Image src={Sig} alt="Sig" className="h-12 w-12 mb-4" />
             <p className="text-sm leading-6 text-gray-300">
               We buy ideas, and we make results happen!
