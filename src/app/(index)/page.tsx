@@ -22,13 +22,13 @@ export default function Home() {
       <div className="block sm:hidden">
         <div className="flex flex-col justify-between px-8">
           <div>
-            <div className="mt-16 text-2xl w-xl text-white font-bold leading-snug">
+            <div className="mt-16 text-2xl w-xl text-white font-bold leading-snug cursor-default">
               WE BUY{" "}
-              <span className="border-b-4 border-sigPrimary hover:border-none hover:bg-sigPrimary transition-colors ease">
+              <span className="border-b-4 border-sigPrimary hover:border-none hover:bg-sigPrimary transition-colors cursor-text ease">
                 IDEAS
               </span>
               , AND WE MAKE{" "}
-              <span className="border-b-4 border-sigPrimary hover:border-none hover:bg-sigPrimary transition-colors ease">
+              <span className="border-b-4 border-sigPrimary hover:border-none hover:bg-sigPrimary transition-colors cursor-text ease">
                 RESULTS
               </span>{" "}
               HAPPEN.
@@ -91,13 +91,13 @@ export default function Home() {
       <div className="hidden sm:block">
         <div className="flex justify-between py-16 px-32">
           <div>
-            <div className="mt-32 text-6xl text-white font-bold w-[48rem] leading-snug">
+            <div className="mt-32 text-6xl text-white font-bold w-[48rem] leading-snug cursor-default">
               WE BUY{" "}
-              <span className="border-b-4 border-sigPrimary hover:border-none hover:bg-sigPrimary transition-colors ease">
+              <span className="border-b-4 border-sigPrimary hover:border-none hover:bg-sigPrimary transition-colors cursor-text ease">
                 IDEAS
               </span>
               , AND WE MAKE{" "}
-              <span className="border-b-4 border-sigPrimary hover:border-none hover:bg-sigPrimary transition-colors ease">
+              <span className="border-b-4 border-sigPrimary hover:border-none hover:bg-sigPrimary transition-colors cursor-text ease">
                 RESULTS
               </span>{" "}
               HAPPEN.
