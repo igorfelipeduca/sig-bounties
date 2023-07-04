@@ -18,8 +18,8 @@ export default function Header() {
               Discord
             </a>
             <Link
-              className="text-sm  cursor-pointer text-zinc-200 hover:text-sigPrimary hover:underline"
-              href={"/bounties"}
+              className="text-md cursor-pointer text-zinc-200 hover:text-sigPrimary hover:underline"
+              href={"/content"}
             >
               Content
             </Link>
