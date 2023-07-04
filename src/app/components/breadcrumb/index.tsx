@@ -4,7 +4,7 @@ import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function BountiesBreadcrumb() {
+export default function Breadcrumb() {
   const pathname = usePathname();
   const routes = pathname.split("/");
 
