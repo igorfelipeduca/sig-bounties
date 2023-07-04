@@ -16,7 +16,7 @@ export default function Breadcrumb() {
             <>
               {routes.indexOf(route) === routes.length - 1 ? (
                 <Link
-                  href={`/bounties/${route}`}
+                  href={`/${route}`}
                   key={index}
                   className="flex text-zinc-400 capitalize hover:text-zinc-300"
                 >
@@ -25,7 +25,7 @@ export default function Breadcrumb() {
               ) : (
                 <div className="flex items-center capitalize" key={index}>
                   <Link
-                    href={`/bounties`}
+                    href={`/`}
                     className="flex text-zinc-500 hover:text-zinc-300"
                   >
                     {route}
