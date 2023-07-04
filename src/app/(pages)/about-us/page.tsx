@@ -1,35 +1,38 @@
 import { LinkIcon } from "lucide-react";
 import Breadcrumb from "../../components/breadcrumb";
 import Link from "next/link";
+import Title from "@/app/components/content/title";
+import SubTitle from "@/app/components/content/subTitle";
+import Text from "@/app/components/content/text";
 
 export default function AboutUs() {
   return (
-    <div className="p-16 border-r border-zinc-800 pr-8">
+    <div className="p-6 sm:p-16 border-r border-zinc-800 pr-8">
       <Breadcrumb />
 
       <div className="mt-16 text-zinc-400 gap-y-8 flex flex-col">
         <div className="flex flex-col">
-          <h1 className="text-4xl font-bold">About Us</h1>
+          <Title title="About Us" />
 
-          <h2 className="text-xl mt-2">Learn more about us</h2>
+          <SubTitle subTitle="Learn more about us" />
         </div>
 
         <div className="mt-6">
-          <h3 className="font-bold text-2xl">What is Sig?</h3>
+          <Title title="What is Sig?" />
 
-          <p className="max-w-5xl mt-2 text-lg">
+          <Text>
             Sig is, first things first, a community. We are a DAO company
             specialized in SaaS production. Powered by sustanability and ESG
             principles, we are a company that believes in the power of
             technology to change the world. If you think you can make the
             difference, we are sure that you have a place in here.
-          </p>
+          </Text>
         </div>
 
         <div className="mt-8">
-          <h3 className="font-bold text-2xl">Motivation</h3>
+          <Title title="Motivation" />
 
-          <p className="max-w-5xl mt-2 text-lg">
+          <Text>
             Sig was created after a principle that is: Big companies are
             throwing away new talents that are not able to get a job because
             they don&apos;t have experience. We believe that the best way to
@@ -37,13 +40,14 @@ export default function AboutUs() {
             doing real projects. Juniors are{" "}
             <span className="text-sigPrimary">dreamers</span>, and we help their
             dreams come true.
-          </p>
+          </Text>
         </div>
 
         <div className="mt-6">
-          <h3 className="font-bold text-2xl">Our purpose</h3>
+          <Title title="Our purpose" />
 
-          <p className="max-w-5xl mt-2 text-lg">
+          <Text>
+            {" "}
             Tech must help the world to be a better place. We want to be a{" "}
             <span className="text-sigPrimary">ESG</span> company that helps the
             environemnt through software. We are partners of an NGO called{" "}
@@ -52,29 +56,29 @@ export default function AboutUs() {
             </span>{" "}
             and one of Sig&apos;s modules is based in building sustainable
             technology to help poor comunities and the environment.
-          </p>
+          </Text>
 
-          <p className="max-w-5xl mt-2 text-lg">
+          <Text>
             Sig&apos;s purpose is to make developers recognize that their work
             can really make a difference, and, what about start being someone
             that helps the environment through{" "}
             <span className="text-sigPrimary">passion</span> and{" "}
             <span className="text-sigPrimary">code</span>.
-          </p>
+          </Text>
 
           <Link
             href={"/sig-gamba"}
-            className="max-w-5xl mt-2 text-lg text-sigPrimary flex items-center gap-x-2"
+            className="max-w-5xl mt-2 text-sm sm:text-lg text-sigPrimary flex items-center gap-x-2"
           >
-            <LinkIcon className="h-6 w-6" />
+            <LinkIcon className="h-4 w-4 sm:h-6 sm:w-6" />
             Learn more about our project
           </Link>
         </div>
 
         <div className="mt-6">
-          <h3 className="font-bold text-2xl">How to be a part</h3>
+          <Title title="How to be a part" />
 
-          <p className="max-w-5xl mt-2 text-lg">
+          <Text>
             As a community, we are always looking for new talents to join us. If
             you are interested in solving challenges and creating inovative
             products with other developers in a horizontal company, you are in
@@ -85,41 +89,41 @@ export default function AboutUs() {
             </a>{" "}
             and meet the developers, designers, QAs, PMs and other techonlogy
             passionates that are part of our community.
-          </p>
+          </Text>
 
-          <p className="max-w-5xl mt-2 text-lg">
+          <Text>
             To start contributing, you must take a look at our bounties system,
             it will be available in this website{" "}
             <span className="text-sigPrimary">soon</span> and it is already
             working at our Discord.
-          </p>
+          </Text>
         </div>
 
         <div className="mt-6">
-          <h3 className="font-bold text-2xl">Follow us</h3>
+          <Title title="Follow us" />
 
-          <div className="flex items-center gap-x-8">
+          <div className="flex gap-x-4 items-center sm:gap-x-8">
             <a
               href="https://instagram.com/sigcoding"
-              className="flex items-center gap-x-2 text-sigPrimary text-xl mt-2"
+              className="flex items-center gap-x-2 text-sigPrimary text-md sm:text-xl mt-2"
             >
-              <LinkIcon className="h-6 w-6" />
+              <LinkIcon className="h-4 w-4 sm:h-6 sm:w-6" />
               Instagram
             </a>
 
             <a
               href="https://twitter.com/sigcoding"
-              className="flex items-center gap-x-2 text-sigPrimary text-xl mt-2"
+              className="flex items-center gap-x-2 text-sigPrimary text-md sm:text-xl mt-2"
             >
-              <LinkIcon className="h-6 w-6" />
+              <LinkIcon className="h-4 w-4 sm:h-6 sm:w-6" />
               Twitter
             </a>
 
             <a
               href="https://www.linkedin.com/company/sigcoding"
-              className="flex items-center gap-x-2 text-sigPrimary text-xl mt-2"
+              className="flex items-center gap-x-2 text-sigPrimary text-md sm:text-xl mt-2"
             >
-              <LinkIcon className="h-6 w-6" />
+              <LinkIcon className="h-4 w-4 sm:h-6 sm:w-6" />
               LinkedIn
             </a>
           </div>
