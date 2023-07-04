@@ -1,33 +1,12 @@
 "use client";
 import { useState } from "react";
-import SidebarItem from "./sidebarItem";
+import SidebarItem from "../components/sidebarItem";
+import { TSidebarItem } from "../types";
+import { navigationItems } from "@/lib/navigation";
 
-interface ISidebarItem {
-  title: string;
-  isOpen?: boolean;
-  subItems?: ISidebarItem[];
-}
-
-const defaultItems: ISidebarItem[] = [
-  {
-    title: "Home",
-    isOpen: false,
-  },
-  {
-    title: "Bounties",
-    isOpen: false,
-    subItems: [
-      {
-        title: "Dynamic Sidebar",
-        isOpen: false,
-      },
-    ],
-  },
-];
-
-export default function BountiesSidebar() {
+export default function Sidebar() {
   const [sidebarItems, setSidebarItems] =
-    useState<ISidebarItem[]>(defaultItems);
+    useState<TSidebarItem[]>(navigationItems);
 
   return (
     <div className="w-[20rem] h-screen border-l border-zinc-800 bg-zinc-900/40 text-zinc-400 p-8">

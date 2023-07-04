@@ -1,46 +1,17 @@
 "use client";
 
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { Box, ChevronDown, ChevronRight, Menu } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 import { useState } from "react";
-import { ISidebarItem } from "../sidebarItem";
 import SidebarItem from "./sidebarItem";
-
-const defaultItems: ISidebarItem[] = [
-  {
-    title: "Home",
-    isOpen: false,
-  },
-  {
-    title: "Bounties",
-    isOpen: false,
-    subItems: [
-      {
-        title: "Translation",
-        isOpen: false,
-        subItems: [
-          {
-            title: "i18n",
-            isOpen: false,
-          },
-        ],
-      },
-    ],
-  },
-];
+import { TSidebarItem } from "../types";
+import { navigationItems } from "@/lib/navigation";
 
 export default function SheetSidebar() {
   const [sidebarItems, setSidebarItems] =
-    useState<ISidebarItem[]>(defaultItems);
+    useState<TSidebarItem[]>(navigationItems);
 
-  const handleOpenToggle = (item: ISidebarItem) => {
+  const handleOpenToggle = (item: TSidebarItem) => {
     const newSidebarItems = sidebarItems.map((i) => {
       if (i.title === item.title) {
         return {

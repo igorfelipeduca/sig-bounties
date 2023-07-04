@@ -4,7 +4,7 @@ import { ChevronRightIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function BountiesBreadcrumb() {
+export default function Breadcrumb() {
   const pathname = usePathname();
   const routes = pathname.split("/");
 
@@ -16,7 +16,7 @@ export default function BountiesBreadcrumb() {
             <>
               {routes.indexOf(route) === routes.length - 1 ? (
                 <Link
-                  href={`/bounties/${route}`}
+                  href={`/${route}`}
                   key={index}
                   className="flex text-zinc-400 capitalize hover:text-zinc-300"
                 >
@@ -25,7 +25,7 @@ export default function BountiesBreadcrumb() {
               ) : (
                 <div className="flex items-center capitalize" key={index}>
                   <Link
-                    href={`/bounties`}
+                    href={`/`}
                     className="flex text-zinc-500 hover:text-zinc-300"
                   >
                     {route}

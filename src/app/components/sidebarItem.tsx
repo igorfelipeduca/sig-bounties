@@ -1,11 +1,11 @@
 import { Box, ChevronDown, ChevronRight } from "lucide-react";
-import { ISidebarItem } from "../sidebarItem";
 import Link from "next/link";
+import { TSidebarItem } from "../types";
 
 interface ISidebarItemProps {
-  item: ISidebarItem;
-  sidebarItems: ISidebarItem[];
-  setSidebarItems: React.Dispatch<React.SetStateAction<ISidebarItem[]>>;
+  item: TSidebarItem;
+  sidebarItems: TSidebarItem[];
+  setSidebarItems: React.Dispatch<React.SetStateAction<TSidebarItem[]>>;
 }
 
 export default function SidebarItem({
@@ -13,7 +13,7 @@ export default function SidebarItem({
   sidebarItems,
   setSidebarItems,
 }: ISidebarItemProps) {
-  const handleOpenToggle = (item: ISidebarItem) => {
+  const handleOpenToggle = (item: TSidebarItem) => {
     const newSidebarItems = sidebarItems.map((i) => {
       if (i.title === item.title) {
         return {
@@ -86,7 +86,7 @@ export default function SidebarItem({
         <Link
           className="flex items-center hover:text-zinc-600 cursor-pointer gap-x-2"
           onClick={() => handleOpenToggle(item)}
-          href={`/bounties/${parseFileName(item.title)}`}
+          href={`/${item.url ? item.url : parseFileName(item.title)}`}
         >
           <Box className="h-4 w-4" /> {item.title}
         </Link>

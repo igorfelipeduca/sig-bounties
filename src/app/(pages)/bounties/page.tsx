@@ -1,11 +1,11 @@
-import { ChevronRightIcon, LinkIcon } from "lucide-react";
+import { LinkIcon } from "lucide-react";
 import { BsDiscord, BsTwitter } from "react-icons/bs";
-import BountiesBreadcrumb from "../components/bountiesBreadcrumb";
+import Breadcrumb from "../../components/breadcrumb";
 
 export default function Bounties() {
   return (
     <div className="p-16 border-r border-zinc-800 pr-8">
-      <BountiesBreadcrumb />
+      <Breadcrumb />
 
       <div className="mt-16 text-zinc-400 gap-y-8 flex flex-col">
         <div className="flex flex-col">
@@ -89,7 +89,14 @@ export default function Bounties() {
               href="https://twitter.com/ducaswtf"
               className="flex items-center mt-4 text-sigPrimary gap-x-2 font-medium"
             >
-              <BsTwitter className="h-6 w-6" /> Duca
+              <BsTwitter className="h-6 w-6" /> Igor
+            </a>
+
+            <a
+              href="https://twitter.com/eduardottduca"
+              className="flex items-center mt-4 text-sigPrimary gap-x-2 font-medium"
+            >
+              <BsTwitter className="h-6 w-6" /> Eduardo
             </a>
           </div>
         </div>
