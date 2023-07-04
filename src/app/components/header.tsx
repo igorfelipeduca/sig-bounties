@@ -36,12 +36,12 @@ export default function BountiesHeader() {
       </div>
 
       <div className="sm:hidden block">
-        <div className="py-6 px-16 bg-zinc-900 border-b border-b-zinc-700 text-zinc-300 flex justify-between items-center">
+        <div className="py-6 px-8 bg-zinc-900 border-b border-b-zinc-700 text-zinc-300 flex justify-between items-center">
           <Link href="/">
             <Image src={Branches} className="h-8 w-8" alt="Sig Branches" />
           </Link>
 
-          <div className="grid grid-cols-4 gap-x-4">
+          <div className="grid grid-cols-3 gap-x-2">
             <a
               href="https://discord.gg/k7tKxaHZBu"
               className="text-sm hover:text-sigPrimary hover:underline cursor-pointer"
