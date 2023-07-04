@@ -1,5 +1,5 @@
-import BountiesSidebar from "./components/sidebar";
-import BountiesHeader from "./components/header";
+import Sidebar from "../components/sidebar";
+import BountiesHeader from "../components/header";
 
 interface IBountiesLayout {
   children: React.ReactNode;
@@ -27,7 +27,7 @@ export default function BountiesLayout({ children }: IBountiesLayout) {
           <div className="relative mt-16 overflow-y-hidden">{children}</div>
 
           <div className="fixed top-0 right-0 mt-24">
-            <BountiesSidebar />
+            <Sidebar />
           </div>
         </div>
       </div>
