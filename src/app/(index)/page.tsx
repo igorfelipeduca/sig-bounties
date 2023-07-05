@@ -15,6 +15,7 @@ import Migranti from "../assets/partners/migranti.png";
 import Gamba from "../assets/partners/gamba.png";
 import Fros from "../assets/partners/fros.svg";
 import Espiral from "../assets/partners/espiral.png";
+import Preze from "../assets/partners/preze.svg";
 
 export default function Home() {
   return (
@@ -51,13 +52,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* parceiros */}
           <div className="justify-center mt-16 w-screen">
             <h1 className="text-xl text-white text-center">Trusted by</h1>
           </div>
 
           <div className="justify-center w-screen">
-            <div className="mt-8 flex gap-x-12 items-center justify-center">
+            <div className="mt-8 flex gap-x-14 items-center justify-center">
               <a
                 href="https://www.gamba.org.br/"
                 target="_blank"
@@ -80,7 +80,7 @@ export default function Home() {
                 <Image
                   src={Seraphini}
                   alt="Seraphini"
-                  className="h-auto w-16 m-0"
+                  className="h-auto w-14 m-0"
                 />
               </a>
             </div>
@@ -88,12 +88,12 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center">
-          <div className="ml-8 mt-4 flex gap-x-2">
+          <div className=" flex gap-x-8 mt-4">
             <a href="https://fros.dev/" target="_blank" className="w-fit h-fit">
               <Image
                 src={Fros}
                 alt="Fros"
-                className="h-auto w-24 m-0 align-center"
+                className="h-auto w-20 align-center"
               />
             </a>
             <a
@@ -104,9 +104,10 @@ export default function Home() {
               <Image
                 src={Migranti}
                 alt="Migranti"
-                className="h-auto w-36 m-0 align-middle"
+                className="h-22 w-20 align-middle"
               />
             </a>
+            <Image src={Preze} alt="Preze Design" className="h-16 w-20"></Image>
           </div>
         </div>
 
@@ -290,11 +291,15 @@ export default function Home() {
           <h1 className="text-2xl text-white">Trusted by</h1>
         </div>
         <div className="flex justify-center w-screen ">
-          <div className="mt-8 grid grid-cols-5 gap-x-16 items-center">
+          <div className="mt-8 grid grid-cols-3 gap-x-32 gap-y-6 items-center">
             <a href="https://www.gamba.org.br/" target="_blank">
               <Image src={Gamba} alt="Gamba" className="h-auto w-24 m-0" />
             </a>
-            <a href="https://www.espiralds.com/" target="_blank">
+            <a
+              href="https://www.espiralds.com/"
+              target="_blank"
+              className="items-center justify-center"
+            >
               <Image src={Espiral} alt="Espiral" className="h-auto w-24 m-0" />
             </a>
             <a href="https://sibelius.github.io/zettelkasten/" target="_blank">
@@ -310,12 +315,23 @@ export default function Home() {
             <a
               href="https://instagram.com/migrandoparati.oficial?igshid=YzcxN2Q2NzY0OA=="
               target="_blank"
+              className="p-0 m-0 h-auto w-fit"
             >
               <Image
                 src={Migranti}
                 alt="Migranti"
-                className="h-auto w-36 m-0"
+                className="h-22 w-20 m-0 ml-2"
               />
+            </a>
+            <a
+              href="https://www.linkedin.com/company/prezedesign"
+              target="_blank"
+            >
+              <Image
+                src={Preze}
+                alt="Preze"
+                className="h-16 w-fit m-0 ml-1"
+              ></Image>
             </a>
           </div>
         </div>
