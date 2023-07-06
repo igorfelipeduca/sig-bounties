@@ -26,6 +26,12 @@ export default function BountiesHeader() {
               Content
             </Link>
             <Link
+              href="/bounties"
+              className="text-lg hover:text-sigPrimary hover:underline cursor-pointer"
+            >
+              Bounties
+            </Link>
+            <Link
               href={"/about-us"}
               className="text-lg hover:text-sigPrimary hover:underline cursor-pointer"
             >
@@ -48,6 +54,12 @@ export default function BountiesHeader() {
             >
               Discord
             </a>
+            <Link
+              href="/bounties"
+              className="text-sm hover:text-sigPrimary hover:underline cursor-pointer"
+            >
+              Bounties
+            </Link>
             <Link
               href="/content"
               className="text-sm hover:text-sigPrimary hover:underline cursor-pointer"

@@ -3,4 +3,5 @@ export type TSidebarItem = {
   isOpen?: boolean;
   subItems?: TSidebarItem[];
   url?: string;
+  tag?: string;
 };

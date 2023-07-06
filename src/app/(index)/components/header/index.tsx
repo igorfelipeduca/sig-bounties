@@ -19,6 +19,12 @@ export default function Header() {
             </a>
             <Link
               className="text-md cursor-pointer text-zinc-200 hover:text-sigPrimary hover:underline"
+              href={"/bounties"}
+            >
+              Bounties
+            </Link>
+            <Link
+              className="text-md cursor-pointer text-zinc-200 hover:text-sigPrimary hover:underline"
               href={"/content"}
             >
               Content
@@ -41,6 +47,12 @@ export default function Header() {
             <span className="text-md cursor-pointer text-zinc-200 hover:text-sigPrimary hover:underline">
               Discord
             </span>
+            <Link
+              href={"/bounties"}
+              className="text-md cursor-pointer text-zinc-200 hover:text-sigPrimary hover:underline"
+            >
+              Bounties
+            </Link>
             <Link
               href={"/content"}
               className="text-md cursor-pointer text-zinc-200 hover:text-sigPrimary hover:underline"
