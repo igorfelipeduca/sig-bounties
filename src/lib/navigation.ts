@@ -18,4 +18,16 @@ export const navigationItems: TSidebarItem[] = [
     title: "Content",
     isOpen: false,
   },
+  {
+    title: "Bounties",
+    isOpen: false,
+    subItems: [
+      {
+        title: "Dynamic SEO",
+        isOpen: false,
+        url: "seo",
+        tag: "bounty",
+      },
+    ],
+  },
 ];

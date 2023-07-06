@@ -86,7 +86,11 @@ export default function SidebarItem({
         <Link
           className="flex items-center hover:text-zinc-600 cursor-pointer gap-x-2"
           onClick={() => handleOpenToggle(item)}
-          href={`/${item.url ? item.url : parseFileName(item.title)}`}
+          href={
+            item.tag === "bounty"
+              ? `/bounties/${item.url ? item.url : parseFileName(item.title)}`
+              : `/${item.url ? item.url : parseFileName(item.title)}`
+          }
         >
           <Box className="h-4 w-4" /> {item.title}
         </Link>
