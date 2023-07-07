@@ -8,6 +8,10 @@
 # testing
 /coverage
 
+# public folder
+/public/sitemap.xml
+/public/sitemap-*.xml
+
 # next.js
 /.next/
 /out/
